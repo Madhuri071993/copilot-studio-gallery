@@ -310,7 +310,7 @@
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.skill.points-reconciliation/data",
       "category": "component",
-      "size": 4358
+      "size": 4459
     },
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.skill.prorated-refund-calculator/botcomponent.xml",
@@ -320,7 +320,7 @@
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.skill.prorated-refund-calculator/data",
       "category": "component",
-      "size": 6783
+      "size": 6940
     },
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.skill.slip-pdf-generator/botcomponent.xml",
@@ -330,7 +330,7 @@
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.skill.slip-pdf-generator/data",
       "category": "component",
-      "size": 7632
+      "size": 7820
     },
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.tool.connected-agent.Default_InventoryFullfilmentAgent_X-w2GP/botcomponent.xml",
@@ -340,7 +340,7 @@
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.tool.connected-agent.Default_InventoryFullfilmentAgent_X-w2GP/data",
       "category": "component",
-      "size": 122
+      "size": 126
     },
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.tool.connected-agent.Default_InventoryFullfilmentAgent_X-w2GP/dependencies.json",
@@ -355,7 +355,7 @@
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.tool.connected-agent.Default_StorePolicyAgent_s9s-u8/data",
       "category": "component",
-      "size": 113
+      "size": 117
     },
     {
       "path": "botcomponents/cr26e_storeassociateassistant_ZQHUx1.tool.connected-agent.Default_StorePolicyAgent_s9s-u8/dependencies.json",
@@ -370,7 +370,7 @@
     {
       "path": "botcomponents/Default_draft_IsBewO.file.card_png.py/filedata/card_png.py",
       "category": "component",
-      "size": 6809
+      "size": 6986
     },
     {
       "path": "botcomponents/Default_draft_IsBewO.file.SKILL.md/botcomponent.xml",
@@ -380,7 +380,7 @@
     {
       "path": "botcomponents/Default_draft_IsBewO.file.SKILL.md/filedata/SKILL.md",
       "category": "component",
-      "size": 4575
+      "size": 4670
     },
     {
       "path": "botcomponents/Default_draft_IsBewO.skill.card-reissue/botcomponent.xml",
@@ -390,7 +390,7 @@
     {
       "path": "botcomponents/Default_draft_IsBewO.skill.card-reissue/data",
       "category": "component",
-      "size": 2372
+      "size": 2426
     },
     {
       "path": "botcomponents/Default_draft_IsBewO.skill.membership-card-png/botcomponent.xml",
@@ -400,7 +400,7 @@
     {
       "path": "botcomponents/Default_draft_IsBewO.skill.membership-card-png/data",
       "category": "component",
-      "size": 98
+      "size": 100
     },
     {
       "path": "botcomponents/Default_draft_IsBewO.tool.MembershipMCPv2-MembershipMCPv2Server/botcomponent.xml",
@@ -480,7 +480,7 @@
     {
       "path": "Connector/cat_membership-20mcp-20v2_customcodeblobcontent.csx",
       "category": "other",
-      "size": 52839
+      "size": 54034
     },
     {
       "path": "Connector/cat_membership-20mcp-20v2_iconblob.Png",
@@ -510,7 +510,7 @@
     {
       "path": "Connector/new_order-20management-20mcp_openapidefinition.json",
       "category": "other",
-      "size": 1027
+      "size": 1063
     },
     {
       "path": "Connector/new_order-20management-20mcp_policytemplateinstances.json",
@@ -525,12 +525,12 @@
     {
       "path": "Connector/new_policy-20rag-20mcp_customcodeblobcontent.csx",
       "category": "other",
-      "size": 55320
+      "size": 56534
     },
     {
       "path": "Connector/new_policy-20rag-20mcp_openapidefinition.json",
       "category": "other",
-      "size": 1064
+      "size": 1093
     },
     {
       "path": "Connector/new_policy-20rag-20mcp_policytemplateinstances.json",
@@ -545,7 +545,7 @@
     {
       "path": "Connector/new_warehouse-20mcp_customcodeblobcontent.csx",
       "category": "other",
-      "size": 61348
+      "size": 62557
     },
     {
       "path": "Connector/new_warehouse-20mcp_iconblob.Png",
@@ -555,7 +555,7 @@
     {
       "path": "Connector/new_warehouse-20mcp_openapidefinition.json",
       "category": "other",
-      "size": 1024
+      "size": 1060
     },
     {
       "path": "Connector/new_warehouse-20mcp_policytemplateinstances.json",

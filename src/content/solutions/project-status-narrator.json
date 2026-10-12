@@ -134,17 +134,17 @@
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 222
+      "size": 223
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 442
+      "size": 443
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3302
+      "size": 3432
     }
   ]
 }

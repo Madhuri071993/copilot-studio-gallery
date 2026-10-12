@@ -183,27 +183,27 @@
     {
       "path": "bots/incident_response_coordinator_agent/bot.xml",
       "category": "bot",
-      "size": 94
+      "size": 95
     },
     {
       "path": "bots/incident_response_coordinator_agent/configuration.json",
       "category": "bot",
-      "size": 351
+      "size": 370
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 225
+      "size": 226
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 541
+      "size": 542
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3831
+      "size": 3981
     }
   ]
 }

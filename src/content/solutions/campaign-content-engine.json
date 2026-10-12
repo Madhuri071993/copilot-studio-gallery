@@ -183,27 +183,27 @@
     {
       "path": "bots/campaign_content_engine_agent/bot.xml",
       "category": "bot",
-      "size": 90
+      "size": 91
     },
     {
       "path": "bots/campaign_content_engine_agent/configuration.json",
       "category": "bot",
-      "size": 340
+      "size": 359
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 219
+      "size": 220
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 517
+      "size": 518
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3837
+      "size": 3987
     }
   ]
 }

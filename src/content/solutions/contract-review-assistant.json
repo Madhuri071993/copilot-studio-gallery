@@ -168,27 +168,27 @@
     {
       "path": "bots/contract_review_assistant_agent/bot.xml",
       "category": "bot",
-      "size": 91
+      "size": 92
     },
     {
       "path": "bots/contract_review_assistant_agent/configuration.json",
       "category": "bot",
-      "size": 345
+      "size": 364
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 217
+      "size": 218
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 525
+      "size": 526
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3303
+      "size": 3433
     }
   ]
 }

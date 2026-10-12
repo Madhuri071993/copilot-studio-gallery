@@ -168,27 +168,27 @@
     {
       "path": "bots/sales_account_brief_agent/bot.xml",
       "category": "bot",
-      "size": 86
+      "size": 87
     },
     {
       "path": "bots/sales_account_brief_agent/configuration.json",
       "category": "bot",
-      "size": 346
+      "size": 365
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 209
+      "size": 210
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 511
+      "size": 512
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3307
+      "size": 3437
     }
   ]
 }
