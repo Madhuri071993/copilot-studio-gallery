@@ -187,82 +187,82 @@
     {
       "path": "Assets/botcomponent_connectionreferenceset.xml",
       "category": "other",
-      "size": 1109
+      "size": 1099
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.AutonomousSettings_cZiLd2/botcomponent.xml",
       "category": "component",
-      "size": 340
+      "size": 332
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.AutonomousSettings_cZiLd2/data",
       "category": "component",
-      "size": 134
+      "size": 133
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.skill.icm-dual-mode-response_UF9/botcomponent.xml",
       "category": "component",
-      "size": 1027
+      "size": 1017
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.skill.icm-dual-mode-response_UF9/data",
       "category": "component",
-      "size": 6787
+      "size": 6723
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.tool.ICMMCP-ICMMCP_8pI/botcomponent.xml",
       "category": "component",
-      "size": 449
+      "size": 439
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.tool.ICMMCP-ICMMCP_8pI/data",
       "category": "component",
-      "size": 235
+      "size": 231
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.tool.Mail-Mail_NFn/botcomponent.xml",
       "category": "component",
-      "size": 662
+      "size": 652
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.tool.Mail-Mail_NFn/data",
       "category": "component",
-      "size": 255
+      "size": 251
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.trigger.Recurrence/botcomponent.xml",
       "category": "component",
-      "size": 360
+      "size": 351
     },
     {
       "path": "botcomponents/Default_ICM_Operations_Agent_5c2d38.trigger.Recurrence/data",
       "category": "component",
-      "size": 1502
+      "size": 1454
     },
     {
       "path": "bots/cr4bd_calendaragent_ZmS6z8/bot.xml",
       "category": "bot",
-      "size": 37681
+      "size": 37671
     },
     {
       "path": "bots/cr4bd_calendaragent_ZmS6z8/configuration.json",
       "category": "bot",
-      "size": 3209
+      "size": 3168
     },
     {
       "path": "bots/cr4bd_calendarassistant_Ap7ncd/bot.xml",
       "category": "bot",
-      "size": 37688
+      "size": 37678
     },
     {
       "path": "bots/cr4bd_calendarassistant_Ap7ncd/configuration.json",
       "category": "bot",
-      "size": 1085
+      "size": 1060
     },
     {
       "path": "bots/Default_ICM_Operations_Agent_5c2d38/bot.xml",
       "category": "bot",
-      "size": 403
+      "size": 394
     },
     {
       "path": "bots/Default_ICM_Operations_Agent_5c2d38/configuration.json",
@@ -272,12 +272,12 @@
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 2778
+      "size": 2729
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 2653
+      "size": 2598
     }
   ]
 }
