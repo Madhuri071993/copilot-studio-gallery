@@ -168,27 +168,27 @@
     {
       "path": "bots/employee_onboarding_guide_agent/bot.xml",
       "category": "bot",
-      "size": 87
+      "size": 86
     },
     {
       "path": "bots/employee_onboarding_guide_agent/configuration.json",
       "category": "bot",
-      "size": 354
+      "size": 335
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 214
+      "size": 213
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 526
+      "size": 525
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3431
+      "size": 3301
     }
   ]
 }

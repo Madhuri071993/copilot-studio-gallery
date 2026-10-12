@@ -168,27 +168,27 @@
     {
       "path": "bots/security_access_review_agent/bot.xml",
       "category": "bot",
-      "size": 89
+      "size": 88
     },
     {
       "path": "bots/security_access_review_agent/configuration.json",
       "category": "bot",
-      "size": 364
+      "size": 345
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 215
+      "size": 214
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 514
+      "size": 513
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3437
+      "size": 3307
     }
   ]
 }

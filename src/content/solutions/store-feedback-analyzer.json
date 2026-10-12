@@ -63,22 +63,22 @@
     {
       "path": "bots/store_feedback_analyzer_agent/bot.xml",
       "category": "bot",
-      "size": 92
+      "size": 91
     },
     {
       "path": "bots/store_feedback_analyzer_agent/configuration.json",
       "category": "bot",
-      "size": 369
+      "size": 350
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 21
+      "size": 20
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 440
+      "size": 439
     }
   ]
 }

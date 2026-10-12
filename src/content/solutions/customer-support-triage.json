@@ -183,27 +183,27 @@
     {
       "path": "bots/customer_support_triage_agent/bot.xml",
       "category": "bot",
-      "size": 89
+      "size": 88
     },
     {
       "path": "bots/customer_support_triage_agent/configuration.json",
       "category": "bot",
-      "size": 361
+      "size": 342
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 223
+      "size": 222
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 518
+      "size": 517
     },
     {
       "path": "Workflows/workflow.json",
       "category": "workflow",
-      "size": 3986
+      "size": 3836
     }
   ]
 }

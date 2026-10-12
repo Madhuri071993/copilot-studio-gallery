@@ -63,22 +63,22 @@
     {
       "path": "bots/knowledge_gap_finder_agent/bot.xml",
       "category": "bot",
-      "size": 87
+      "size": 86
     },
     {
       "path": "bots/knowledge_gap_finder_agent/configuration.json",
       "category": "bot",
-      "size": 363
+      "size": 344
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 21
+      "size": 20
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 431
+      "size": 430
     }
   ]
 }
