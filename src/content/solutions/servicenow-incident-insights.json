@@ -166,87 +166,87 @@
     {
       "path": "Assets/botcomponent_connectionreferenceset.xml",
       "category": "other",
-      "size": 792
+      "size": 785
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.AutonomousSettings_cZiLd2/botcomponent.xml",
       "category": "component",
-      "size": 356
+      "size": 348
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.AutonomousSettings_cZiLd2/data",
       "category": "component",
-      "size": 142
+      "size": 141
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9/botcomponent.xml",
       "category": "component",
-      "size": 777
+      "size": 767
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9/data",
       "category": "component",
-      "size": 5858
+      "size": 5762
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn/botcomponent.xml",
       "category": "component",
-      "size": 678
+      "size": 668
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn/data",
       "category": "component",
-      "size": 263
+      "size": 259
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.trigger.Recurrence/botcomponent.xml",
       "category": "component",
-      "size": 376
+      "size": 367
     },
     {
       "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.trigger.Recurrence/data",
       "category": "component",
-      "size": 2316
+      "size": 2268
     },
     {
       "path": "bots/cr4bd_calendaragent_ZmS6z8/bot.xml",
       "category": "bot",
-      "size": 37681
+      "size": 37671
     },
     {
       "path": "bots/cr4bd_calendaragent_ZmS6z8/configuration.json",
       "category": "bot",
-      "size": 3742
+      "size": 3697
     },
     {
       "path": "bots/cr4bd_calendarassistant_Ap7ncd/bot.xml",
       "category": "bot",
-      "size": 37688
+      "size": 37678
     },
     {
       "path": "bots/cr4bd_calendarassistant_Ap7ncd/configuration.json",
       "category": "bot",
-      "size": 1622
+      "size": 1593
     },
     {
       "path": "bots/Default_ServiceNow_Incident_Insights_5c2d38/bot.xml",
       "category": "bot",
-      "size": 425
+      "size": 416
     },
     {
       "path": "bots/Default_ServiceNow_Incident_Insights_5c2d38/configuration.json",
       "category": "bot",
-      "size": 8063
+      "size": 8040
     },
     {
       "path": "customizations.xml",
       "category": "solution",
-      "size": 1796
+      "size": 1763
     },
     {
       "path": "solution.xml",
       "category": "solution",
-      "size": 2932
+      "size": 2875
     }
   ]
 }
