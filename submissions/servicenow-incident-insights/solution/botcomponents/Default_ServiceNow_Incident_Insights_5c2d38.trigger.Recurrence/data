@@ -1,0 +1,49 @@
+kind: ExternalTriggerConfiguration
+externalTriggerSource:
+  kind: AgentRecurrenceTrigger
+  callbackMessage:
+    segments:
+      - kind: StaticSegment
+        value: "Run the ServiceNow dual-mode skill in scheduled mode. SETUP REQUIRED: add ServiceNow List Records (GetRecords) and Get Record (GetRecord) tools and configure their connection in Copilot Studio. Use incident records created in the past seven days through the run time (UTC) and currently assigned_to <scheduled-servicenow-user-sys-id>; this is not assignment history. Send the Executive Summary and Incident List JSON using Mail only to <scheduled-report-recipient-email>. Do not infer identity or recipient from 'me' or triggerBody. Resolve all placeholders before enabling this schedule. Retrieve every page before claiming counts or no records. On setup, authentication, permission, query, pagination, or retrieval failure, report setup_required, failed, or incomplete with unavailable counts and Incident List null, never a successful empty report. If the recipient is unresolved, do not send mail. If complete retrieval genuinely returns zero records, still email a successful no-records summary."
+
+      - kind: StaticSegment
+        value: " @{triggerBody()}"
+
+  inputs:
+    - name: frequency
+      displayName: Frequency
+      description: How often the trigger fires (e.g., Hour, Day, Week).
+      value:
+        kind: ValueReference
+        type: "{\"type\":\"string\"}"
+        defaultValue: "\"Week\""
+
+      isValueOverridable: true
+
+    - name: interval
+      displayName: Interval
+      description: The number of frequency units between each firing.
+      value:
+        kind: ValueReference
+        type: "{\"type\":\"string\"}"
+        defaultValue: "\"1\""
+
+      isValueOverridable: true
+
+    - name: startTime
+      displayName: Start time
+      description: When the recurrence begins.
+      value:
+        kind: ValueReference
+        type: "{\"type\":\"string\"}"
+        defaultValue: "\"<start-time>\""
+
+    - name: timeZone
+      displayName: Time zone
+      description: Windows time zone id used to interpret start time and schedule.
+      value:
+        kind: ValueReference
+        type: "{\"type\":\"string\"}"
+        defaultValue: "\"<time-zone>\""
+
+  authMode: Invoker

@@ -1,0 +1,14 @@
+{
+  "name": "ServiceNow Incident Insights Agent",
+  "description": "A ServiceNow incident operations template for grounded chat and weekly email summaries. Requires portal setup of ServiceNow tools, connection, scheduled identity, and recipient before use.",
+  "tags": [
+    "incident-management",
+    "operations",
+    "scheduled",
+    "email",
+    "servicenow"
+  ],
+  "category": "IT & security",
+  "author": "Sushank Kumar",
+  "featured": false
+}

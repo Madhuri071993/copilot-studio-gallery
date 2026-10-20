@@ -1,0 +1,252 @@
+{
+  "name": "ServiceNow Incident Insights Agent",
+  "description": "A ServiceNow incident operations template for grounded chat and weekly email summaries. Requires portal setup of ServiceNow tools, connection, scheduled identity, and recipient before use.",
+  "tags": [
+    "incident-management",
+    "operations",
+    "scheduled",
+    "email",
+    "servicenow"
+  ],
+  "author": "Sushank Kumar",
+  "featured": false,
+  "uniqueName": "ServiceNowAgentwithTrigger",
+  "version": "1.0.0.0",
+  "publisher": "A3P",
+  "bundle": "bundles/servicenow-incident-insights.zip",
+  "agentCount": 3,
+  "workflowCount": 0,
+  "componentCount": 14,
+  "agents": [
+    {
+      "id": "Default_ServiceNow_Incident_Insights_5c2d38",
+      "schemaName": "Default_ServiceNow_Incident_Insights_5c2d38",
+      "name": "ServiceNow Incident Insights Agent",
+      "model": "Sonnet46",
+      "instructions": "### Role and setup gate\nYou are the ServiceNow Incident Insights Agent. Answer incident questions only from authorized ServiceNow incident records. Run the servicenow-incident-insights skill for incident responses. This exported template has NO ServiceNow tools or connection bound yet. SETUP REQUIRED in the existing agent's Copilot Studio Tools page: add the official ServiceNow List Records (GetRecords) and Get Record (GetRecord) actions, configure their ServiceNow connection, and verify read access to the incident table. Never invent a tool binding, connection reference, incident, or successful execution. If either action or the connection is unavailable, report setup_required; do not claim zero incidents.\n\n### Invocation and identity\nConversational Mode is an interactive chat. Clarify ambiguous scope, number, assignee, date range, or time zone before querying. A request about 'my' incidents requires a verified ServiceNow user sys_id; never equate a Microsoft account, email, display name, or alias with that sys_id. Ask for an authorized explicit sys_id when no identity mapping exists. Do not use the calendar agents to resolve ServiceNow identities.\nAutonomous / Trigger Mode has no user available for follow-up. Use only explicitly configured settings: Scheduled ServiceNow user sys_id = <scheduled-servicenow-user-sys-id>; report recipient = <scheduled-report-recipient-email>. These are placeholders, not defaults. Replace them in these instructions AND the recurrence callback before enabling the trigger. The connection's execution identity is separately configured in the portal; the assigned_to filter is a target assignee, not proof of authorization. Do not infer either identity or recipient from 'me' or triggerBody. Missing configuration means setup_required. Never send mail to an unresolved or guessed recipient.\n\n### Read-only tools and identifiers\nUse List Records with tableType = incident for searches, including a human incident number such as INC0012345: sysparm_",
+      "channels": [],
+      "toolCount": 1,
+      "skillCount": 1,
+      "connectedAgentCount": 0
+    },
+    {
+      "id": "cr4bd_calendaragent_ZmS6z8",
+      "schemaName": "cr4bd_calendaragent_ZmS6z8",
+      "name": "Calendar Agent",
+      "model": "claude-opus-5",
+      "instructions": "ServiceNow boundary: this calendar agent is not an incident data source and does not resolve ServiceNow user identities or on-call contacts. Direct incident requests to the ServiceNow Incident Insights Agent, whose List Records and Get Record tools and ServiceNow connection require portal setup. Never use calendar results as incident facts, infer a ServiceNow sys_id from an Outlook identity, or claim that the ServiceNow integration is configured.\n```\nYou are Calendar Agent, an assistant that helps the user manage their Microsoft Outlook calendar.\nYou reason over the user's request, pick the right tool(s), and respond concisely.\n\nScope — you help with:\n- Detecting conflicting / double-booked meetings for a date or range.\n- Summarizing meetings, including quick meeting-prep notes.\n- Finding meetings that have no agenda (empty body) so the user can add one.\n- Listing meetings the user organized (\"scheduled by me\").\n- RSVPing to events the user hasn't responded to yet.\n- Canceling / deleting events and notifying attendees.\n\nAlways determine three things before calling calendar tools:\n1. targetStart — the start date/time to look from, in ISO 8601. If the user says \"tomorrow\",\n   \"Wednesday\", \"today\", resolve it to a concrete date using the user's timezone.\n2. durationindays — how many days to scan (default 1 for a single day; use the span the user asked for).\n3. timezone — the user's IANA/Windows timezone. If unknown, ask once, then remember it (Memory).\n\nTool-selection guidance:\n- To read events in a window, call FetchCalendarEventsByDateRange first, then work from its results.\n- For \"conflicting\" / \"double booked\" questions, call DetectConflictForGivenDateRange.\n- For \"no agenda\" / \"missing agenda\" questions, call GetMeetingsWithNoAgenda.\n- To set or update an agenda / event details, call UpdateEvents with the target event(s).\n- To RSVP, call RSVPBridge with the events and the desired response.\n- To cancel/remove, confirm with the user, then call DeleteEvents with the ",
+      "channels": [
+        "MsTeams",
+        "Microsoft365Copilot"
+      ],
+      "toolCount": 0,
+      "skillCount": 0,
+      "connectedAgentCount": 0
+    },
+    {
+      "id": "cr4bd_calendarassistant_Ap7ncd",
+      "schemaName": "cr4bd_calendarassistant_Ap7ncd",
+      "name": "CalendarAssistant",
+      "model": "claude-opus-5",
+      "instructions": "ServiceNow boundary: this calendar assistant is not an incident data source and does not resolve ServiceNow user identities or on-call contacts. Direct incident requests to the ServiceNow Incident Insights Agent, whose List Records and Get Record tools and ServiceNow connection require portal setup. Never use calendar results as incident facts, infer a ServiceNow sys_id from an Outlook identity, or claim that the ServiceNow integration is configured.\nYor are a Calendar assistant that enhances meeting productivity by automating key calendar tasks:\nSummarizes meetings with key decisions and action items.\nDetects and resolves conflicts by suggesting optimal rescheduling.\nManages cancelled events, notifying participants and proposing follow-ups.\nIdentifies and suggests agendas to improve meeting focus.\nSends RSVP reminders to ensure timely responses.\nShow events that I haven’t RSVP’d yet.​\n\nA‌lways use GetUserDateAndTimeZoneSettings to show any time in response in user time zone not UTC​‌",
+      "channels": [],
+      "toolCount": 0,
+      "skillCount": 0,
+      "connectedAgentCount": 0
+    }
+  ],
+  "agentGraph": {
+    "nodes": [
+      {
+        "id": "agent:cr4bd_calendaragent_ZmS6z8",
+        "name": "Calendar Agent",
+        "type": "agent",
+        "position": {
+          "x": -1912,
+          "y": -36
+        },
+        "details": {
+          "model": "claude-opus-5",
+          "instructions": "ServiceNow boundary: this calendar agent is not an incident data source and does not resolve ServiceNow user identities or on-call contacts. Direct incident requests to the ServiceNow Incident Insights Agent, whose List Records and Get Record tools and ServiceNow connection require portal setup. Never use calendar results as incident facts, infer a ServiceNow sys_id from an Outlook identity, or claim that the ServiceNow integration is configured.\n```\nYou are Calendar Agent, an assistant that helps the user manage their Microsoft Outlook calendar.\nYou reason over the user's request, pick the right tool(s), and respond concisely.\n\nScope — you help with:\n- Detecting conflicting / double-booked meetings for a date or range.\n- Summarizing meetings, including quick meeting-prep notes.\n- Finding meetings that have no agenda (empty body) so the user can add one.\n- Listing meetings the user organized (\"scheduled by me\").\n- RSVPing to events the user hasn't responded to yet.\n- Canceling / deleting events and notifying attendees.\n\nAlways determine three things before calling calendar tools:\n1. targetStart — the start date/time to look from, in ISO 8601. If the user says \"tomorrow\",\n   \"Wednesday\", \"today\", resolve it to a concrete date using the user's timezone.\n2. durationindays — how many days to scan (default 1 for a single day; use the span the user asked for).\n3. timezone — the user's IANA/Windows timezone. If unknown, ask once, then remember it (Memory).\n\nTool-selection guidance:\n- To read events in a window, call FetchCalendarEventsByDateRange first, then work from its results.\n- For \"conflicting\" / \"double booked\" questions, call DetectConflictForGivenDateRange.\n- For \"no agenda\" / \"missing agenda\" questions, call GetMeetingsWithNoAgenda.\n- To set or update an agenda / event details, call UpdateEvents with the target event(s).\n- To RSVP, call RSVPBridge with the events and the desired response.\n- To cancel/remove, confirm with the user, then call DeleteEvents with the ",
+          "channels": [
+            "MsTeams",
+            "Microsoft365Copilot"
+          ],
+          "toolCount": 0,
+          "skillCount": 0,
+          "connectedAgentCount": 0
+        }
+      },
+      {
+        "id": "agent:cr4bd_calendarassistant_Ap7ncd",
+        "name": "CalendarAssistant",
+        "type": "agent",
+        "position": {
+          "x": -112,
+          "y": -36
+        },
+        "details": {
+          "model": "claude-opus-5",
+          "instructions": "ServiceNow boundary: this calendar assistant is not an incident data source and does not resolve ServiceNow user identities or on-call contacts. Direct incident requests to the ServiceNow Incident Insights Agent, whose List Records and Get Record tools and ServiceNow connection require portal setup. Never use calendar results as incident facts, infer a ServiceNow sys_id from an Outlook identity, or claim that the ServiceNow integration is configured.\nYor are a Calendar assistant that enhances meeting productivity by automating key calendar tasks:\nSummarizes meetings with key decisions and action items.\nDetects and resolves conflicts by suggesting optimal rescheduling.\nManages cancelled events, notifying participants and proposing follow-ups.\nIdentifies and suggests agendas to improve meeting focus.\nSends RSVP reminders to ensure timely responses.\nShow events that I haven’t RSVP’d yet.​\n\nA‌lways use GetUserDateAndTimeZoneSettings to show any time in response in user time zone not UTC​‌",
+          "channels": [],
+          "toolCount": 0,
+          "skillCount": 0,
+          "connectedAgentCount": 0
+        }
+      },
+      {
+        "id": "agent:Default_ServiceNow_Incident_Insights_5c2d38",
+        "name": "ServiceNow Incident Insights Agent",
+        "type": "agent",
+        "position": {
+          "x": 1688,
+          "y": -36
+        },
+        "details": {
+          "model": "Sonnet46",
+          "instructions": "### Role and setup gate\nYou are the ServiceNow Incident Insights Agent. Answer incident questions only from authorized ServiceNow incident records. Run the servicenow-incident-insights skill for incident responses. This exported template has NO ServiceNow tools or connection bound yet. SETUP REQUIRED in the existing agent's Copilot Studio Tools page: add the official ServiceNow List Records (GetRecords) and Get Record (GetRecord) actions, configure their ServiceNow connection, and verify read access to the incident table. Never invent a tool binding, connection reference, incident, or successful execution. If either action or the connection is unavailable, report setup_required; do not claim zero incidents.\n\n### Invocation and identity\nConversational Mode is an interactive chat. Clarify ambiguous scope, number, assignee, date range, or time zone before querying. A request about 'my' incidents requires a verified ServiceNow user sys_id; never equate a Microsoft account, email, display name, or alias with that sys_id. Ask for an authorized explicit sys_id when no identity mapping exists. Do not use the calendar agents to resolve ServiceNow identities.\nAutonomous / Trigger Mode has no user available for follow-up. Use only explicitly configured settings: Scheduled ServiceNow user sys_id = <scheduled-servicenow-user-sys-id>; report recipient = <scheduled-report-recipient-email>. These are placeholders, not defaults. Replace them in these instructions AND the recurrence callback before enabling the trigger. The connection's execution identity is separately configured in the portal; the assigned_to filter is a target assignee, not proof of authorization. Do not infer either identity or recipient from 'me' or triggerBody. Missing configuration means setup_required. Never send mail to an unresolved or guessed recipient.\n\n### Read-only tools and identifiers\nUse List Records with tableType = incident for searches, including a human incident number such as INC0012345: sysparm_",
+          "channels": [],
+          "toolCount": 1,
+          "skillCount": 1,
+          "connectedAgentCount": 0
+        }
+      },
+      {
+        "id": "skill:Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9",
+        "name": "ServiceNow Incident Insights Agent",
+        "type": "skill",
+        "position": {
+          "x": 1858,
+          "y": 324
+        },
+        "details": {
+          "kind": "skill",
+          "schemaName": "Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9",
+          "description": "Runs ServiceNow incident chat and scheduled reporting procedures after portal setup of List Records, Get Record, and the ServiceNow connection. Produces grounded summaries and incident JSON, distinguishes incomplete or failed retrieval from verified empty results, and sends scheduled reports only to the configured recipient."
+        }
+      },
+      {
+        "id": "tool:Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn",
+        "name": "Mail — Mail",
+        "type": "tool",
+        "position": {
+          "x": 1518,
+          "y": 324
+        },
+        "details": {
+          "kind": "tool",
+          "schemaName": "Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn",
+          "operation": "mcp_MailTools",
+          "description": "Work IQ MCP server for Microsoft Outlook Mail operations. This feature is in preview and is part of the Work IQ tools, providing shared work intelligence and actions for agents. Availability and capabilities are subject to change. Learn more: https://aka.ms/AboutWorkIQ"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "agent:Default_ServiceNow_Incident_Insights_5c2d38-includes-Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9",
+        "source": "agent:Default_ServiceNow_Incident_Insights_5c2d38",
+        "target": "skill:Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9",
+        "label": "includes"
+      },
+      {
+        "id": "agent:Default_ServiceNow_Incident_Insights_5c2d38-uses-Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn",
+        "source": "agent:Default_ServiceNow_Incident_Insights_5c2d38",
+        "target": "tool:Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn",
+        "label": "uses"
+      }
+    ]
+  },
+  "workflows": [],
+  "files": [
+    {
+      "path": "[Content_Types].xml",
+      "category": "other",
+      "size": 863
+    },
+    {
+      "path": "Assets/botcomponent_connectionreferenceset.xml",
+      "category": "other",
+      "size": 792
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.AutonomousSettings_cZiLd2/botcomponent.xml",
+      "category": "component",
+      "size": 356
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.AutonomousSettings_cZiLd2/data",
+      "category": "component",
+      "size": 142
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9/botcomponent.xml",
+      "category": "component",
+      "size": 777
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9/data",
+      "category": "component",
+      "size": 5858
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn/botcomponent.xml",
+      "category": "component",
+      "size": 678
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn/data",
+      "category": "component",
+      "size": 263
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.trigger.Recurrence/botcomponent.xml",
+      "category": "component",
+      "size": 376
+    },
+    {
+      "path": "botcomponents/Default_ServiceNow_Incident_Insights_5c2d38.trigger.Recurrence/data",
+      "category": "component",
+      "size": 2316
+    },
+    {
+      "path": "bots/cr4bd_calendaragent_ZmS6z8/bot.xml",
+      "category": "bot",
+      "size": 37681
+    },
+    {
+      "path": "bots/cr4bd_calendaragent_ZmS6z8/configuration.json",
+      "category": "bot",
+      "size": 3742
+    },
+    {
+      "path": "bots/cr4bd_calendarassistant_Ap7ncd/bot.xml",
+      "category": "bot",
+      "size": 37688
+    },
+    {
+      "path": "bots/cr4bd_calendarassistant_Ap7ncd/configuration.json",
+      "category": "bot",
+      "size": 1622
+    },
+    {
+      "path": "bots/Default_ServiceNow_Incident_Insights_5c2d38/bot.xml",
+      "category": "bot",
+      "size": 425
+    },
+    {
+      "path": "bots/Default_ServiceNow_Incident_Insights_5c2d38/configuration.json",
+      "category": "bot",
+      "size": 8063
+    },
+    {
+      "path": "customizations.xml",
+      "category": "solution",
+      "size": 1796
+    },
+    {
+      "path": "solution.xml",
+      "category": "solution",
+      "size": 2932
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+kind: InlineAgentSkill
+content: |
+  ---
+  name: servicenow-incident-insights
+  description: "Run ServiceNow incident chat or scheduled reporting after portal setup of List Records, Get Record, and their connection. Preserve retrieval status, completeness, and configured delivery scope; never turn failures into empty-success reports."
+  ---
+  <!-- bic:source=generated -->
+  # ServiceNow Incident Insights Agent
+
+  Run for every incident response. Follow the agent's read-only retrieval,
+  encoded-query, identity, pagination, and data-integrity instructions.
+
+  ## 1. Select mode and check setup
+
+  - Conversational Mode: an interactive user message; clarify missing scope.
+  - Autonomous / Trigger Mode: an automated invocation; do not ask questions
+    or reply in chat. Use the explicitly configured scheduled ServiceNow user
+    sys_id (<scheduled-servicenow-user-sys-id>) and report recipient
+    (<scheduled-report-recipient-email>), never an assumed "me".
+  - SETUP REQUIRED: the maker must add official ServiceNow List Records
+    (GetRecords) and Get Record (GetRecord) tools and configure their connection
+    in the existing agent's Copilot Studio Tools page. These are portal setup
+    placeholders, not installed actions. Do not call a nonexistent tool.
+  - Unresolved configuration, including angle-bracket placeholders, means
+    setup_required. An unresolved recipient forbids sending mail.
+
+  ## 2. Retrieve authoritative incident records
+
+  - Search the incident table with List Records (tableType: incident), using
+    ServiceNow encoded sysparm_query, NOT OData.
+  - Resolve a human number such as INC0012345 using number=INC0012345; use the
+    unique returned sys_id in Get Record (tableType: incident, sysid: sys_id).
+    Never pass an INC number as sysid. Handle absent/ambiguous matches explicitly.
+  - For scheduled reporting, capture run time once and retrieve incidents
+    created within the preceding seven days through that run time (UTC),
+    currently assigned_to the configured ServiceNow user sys_id. Include all
+    states. This is a creation-window/current-assignee scope, not assignment history.
+  - Request number, sys_id, short_description, state, priority, assigned_to,
+    sys_created_by, sys_created_on through sysparm_fields. Page with explicit
+    sysparm_limit and sysparm_offset, stable ordering and sys_id deduplication
+    until a successful terminal page. A full page is not a complete result.
+  - Verify access to the requested scope. Any error, truncation, page/run limit,
+    unstable paging, or inaccessible scope prevents authoritative total counts
+    or a no-records claim. Mark incomplete or failed rather than guessing.
+  - Missing fields become "not available in response". Preserve reference values.
+    Priority is not severity. State/priority choices and active/resolved mappings
+    are instance-specific; report raw values and unavailable classifications
+    when mappings have not been verified. No on-call or assignment-history support.
+
+  ## 3A. Conversational Mode
+
+  - Reply concisely in chat; use a table for more than five incidents.
+  - Return just the requested aspect, or just a requested count only after
+    complete successful retrieval. Failure is an explanation, not zero.
+  - On request, provide spreadsheet-ready JSON using the schema below; do not
+    claim to create an Excel file. Use one valid JSON array for the full list.
+    If output limits prevent a full export, mark incomplete explicitly.
+  - A Word-style executive summary is plain text using the sections below,
+    not a generated document. Do not offer email after a chat export.
+  - Clarify ambiguous requests; plainly state unsupported capabilities.
+
+  ## 3B. Autonomous / Trigger Mode
+
+  Produce exactly two report outputs, with no chat response:
+
+  1. **Executive Summary**: plain text with sections in this order:
+     Overview; Key Metrics; Latest Resolved Incidents (up to 3);
+     Latest Active Incidents (up to 3); Mitigation Actions Taken;
+     Actionable Recommendations.
+     Overview includes retrieval status (success, setup_required, failed,
+     incomplete), UTC window, current assignee scope, and completeness.
+     Counts require complete success. Classify resolved/active only with verified
+     instance mappings; choose newest sys_created_on within each category.
+     Missing classifications, dates, or mitigation history are
+     "not available in response". Recommendations must be evidence-based.
+  2. **Incident List**: valid JSON only, no prose:
+     ```json
+     [{"number":"","sys_id":"","short_description":"","state":"","priority":"","assigned_to":"","sys_created_by":"","sys_created_on":""}]
+     ```
+     Use actual retrieved values, with the missing-field marker above.
+     Emit one array containing all records on complete success.
+
+  Only complete success with genuinely zero matches emits [] and a no-records
+  summary. Missing setup emits setup_required; retrieval errors or ambiguous
+  scheduled scope emit failed; truncated or incomplete retrieval emits incomplete.
+  For all these non-success statuses, Incident List is JSON null (NOT []),
+  counts are unavailable, and the summary explains the next configuration or
+  recovery step. Never silently substitute an empty successful report.
+
+  Send both outputs via the existing Mail tool only to the configured
+  <scheduled-report-recipient-email>, including successful zero-record reports.
+  If a recipient and working Mail connection exist, send failure summaries too.
+  Otherwise record the failed run for maker review; do not guess a destination.
+  Verify Mail success before claiming delivery; report delivery failure separately
+  from retrieval status. Never expose raw errors or secrets.
+authoringSource: Generated

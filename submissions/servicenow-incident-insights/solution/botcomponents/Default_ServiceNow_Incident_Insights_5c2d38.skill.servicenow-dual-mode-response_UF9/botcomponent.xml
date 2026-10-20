@@ -1,0 +1,11 @@
+<botcomponent schemaname="Default_ServiceNow_Incident_Insights_5c2d38.skill.servicenow-dual-mode-response_UF9">
+  <componenttype>9</componenttype>
+  <description>Runs ServiceNow incident chat and scheduled reporting procedures after portal setup of List Records, Get Record, and the ServiceNow connection. Produces grounded summaries and incident JSON, distinguishes incomplete or failed retrieval from verified empty results, and sends scheduled reports only to the configured recipient.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>ServiceNow Incident Insights Agent</name>
+  <parentbotid>
+    <schemaname>Default_ServiceNow_Incident_Insights_5c2d38</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

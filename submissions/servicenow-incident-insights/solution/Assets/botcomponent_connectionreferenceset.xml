@@ -1,0 +1,8 @@
+<botcomponent_connectionreferenceset>
+  <botcomponent_connectionreference botcomponentid.schemaname="Default_ServiceNow_Incident_Insights_5c2d38.AutonomousSettings_cZiLd2" connectionreferenceid.connectionreferencelogicalname="Default_ServiceNow_Incident_Insights_5c2d38.cr.shared_microsoftcopilotstudio">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+  <botcomponent_connectionreference botcomponentid.schemaname="Default_ServiceNow_Incident_Insights_5c2d38.tool.Mail-Mail_NFn" connectionreferenceid.connectionreferencelogicalname="Default_ServiceNow_Incident_Insights_5c2d38.cr.shared_a365outlookma.586bee57-3339-4847-aaee-d428843e6781">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+</botcomponent_connectionreferenceset>
