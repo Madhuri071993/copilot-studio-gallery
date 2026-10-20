@@ -8,8 +8,14 @@
     "email",
     "servicenow"
   ],
-  "author": "Sushank Kumar",
+  "category": "IT & security",
   "featured": false,
+  "author": "Sushank Kumar",
+  "authors": [
+    {
+      "name": "Sushank Kumar"
+    }
+  ],
   "uniqueName": "ServiceNowAgentwithTrigger",
   "version": "1.0.0.0",
   "publisher": "A3P",
@@ -157,6 +163,7 @@
     ]
   },
   "workflows": [],
+  "connectors": [],
   "files": [
     {
       "path": "[Content_Types].xml",
