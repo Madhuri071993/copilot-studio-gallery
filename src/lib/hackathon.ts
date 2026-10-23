@@ -9,21 +9,21 @@ export interface HackathonBadge {
   rank: number;
 }
 
-export const HACKATHON_EVENT = "Copilot Studio Hackathon";
+export const HACKATHON_EVENT = "Copilot Studio Agents & Workflows Build-a-thon";
 
 export const HACKATHON_BADGES: Record<HackathonAward, HackathonBadge> = {
   winner: {
     award: "winner",
-    title: "Hackathon Winner",
+    title: "Build-a-thon Winner",
     image: "badges/hackathon-winner.png",
-    meaning: "Won the Copilot Studio agents & workflows hackathon.",
+    meaning: "Tamed the dragon, mastered the agentic flight, and conquered the Build-a-thon.",
     rank: 2,
   },
   hacker: {
     award: "hacker",
     title: "Agents & Workflows Hacker",
     image: "badges/hackathon-hacker.png",
-    meaning: "Built and shared a solution at the Copilot Studio agents & workflows hackathon.",
+    meaning: "Rode with the dragon through the agentic Build-a-thon and lived to tell the tale.",
     rank: 1,
   },
 };
