@@ -1,0 +1,21 @@
+{
+  "name": "Technical Hiring Strategist Agent",
+  "previewWorkflow": "Create a technical job description",
+  "description": "Agent that creates job descriptions, interview questions, interview loops, and resume evaluations for top-tier engineering roles.",
+  "tags": [
+   "hiring", 
+  "recruiting", 
+  "interviews", 
+  "resume-screening", 
+  "human-in-the-loop",
+  "outlook",
+  "follow-ups",
+  "JD creation"
+],
+  "category": "Human resources",
+  "author": "Madhuri Mangal",
+  "authorUrl": "https://github.com/Madhuri071993",
+  "createdAt": "2026-10-22",
+  "updatedAt": "2026-10-26",
+  "featured": false
+}

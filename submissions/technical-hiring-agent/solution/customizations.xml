@@ -1,0 +1,26 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26102.120" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26103.00137">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows></Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="cred7_technicalhiringnew_4B3Yst.cr.shared_office365.3ec2a7d9-2289-4d19-9fb0-41f6382228d8">
+      <connectionreferencedisplayname>cred7_technicalhiringnew_4B3Yst.cr.shared_office365.3ec2a7d9-2289-4d19-9fb0-41f6382228d8</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

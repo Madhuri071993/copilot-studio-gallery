@@ -1,0 +1,11 @@
+<botcomponent schemaname="cred7_technicalhiringnew_4B3Yst.tool.SendanemailV2_i8j">
+  <componenttype>9</componenttype>
+  <description>Sends an email from the user's Outlook. Call this ONLY after the user has explicitly asked or approved the full draft in the conversation. Never call it to draft or preview an email</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Send an email (V2)</name>
+  <parentbotid>
+    <schemaname>cred7_technicalhiringnew_4B3Yst</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
