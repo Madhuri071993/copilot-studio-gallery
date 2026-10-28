@@ -49,5 +49,5 @@ It evaluates candidates on technical depth and on alignment with four leadership
 Create a JD for a Staff Backend Engineer on the payments authorization platform.
 Design interview questions for a Senior ML Engineer working on real-time fraud detection.
 Create an interview loop for a Principal Data Platform Engineer.
-Evaluate this resume for a Senior Frontend Engineer role.
+Evaluate this resume for a Senior Frontend Engineer role..
 ```
