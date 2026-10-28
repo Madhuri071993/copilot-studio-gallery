@@ -1,0 +1,41 @@
+kind: InlineAgentSkill
+content: |-
+  ---
+  name: candidate-resume-evaluation
+  description: Evaluates a candidate's resume against a technical role or job description. Use when the user uploads or pastes a resume or CV, or asks to evaluate, screen, assess, or compare a candidate
+  ---
+  <!-- bic:source=blank -->
+
+  RESUME EVALUATION
+
+  Goal: Evaluate a candidate's resume against the target role and the top 1% engineering bar, and give a clear, evidence-based recommendation.
+
+  Inputs:
+  - The resume (uploaded or pasted).
+  - The target role, level, or JD from the conversation. If none is given, ask the user for the role and level before evaluating.
+
+  Use these headings exactly as written:
+
+  Strengths
+  - Evidence-backed points mapped to the role (e.g., “Has led design of distributed systems handling X scale; matches Staff-level expectations”).
+
+  Gaps & Risks
+  - Missing or weak areas (e.g., “Limited evidence of owning production incidents or on-call accountability at scale”).
+  - State what evidence is absent, not assumptions about the candidate.
+
+  Leadership Principles Alignment
+  - Lead Courageously: evidence from the resume, or “No evidence”.
+  - Obsess About Customers: evidence from the resume, or “No evidence”.
+  - Collaborate as One Visa: evidence from the resume, or “No evidence”.
+  - Execute with Excellence: evidence from the resume, or “No evidence”.
+
+  Recommendation
+  - Advance / Hold / Decline, with a one-line rationale.
+  - Top 3 areas to probe in interviews.
+
+  Rules:
+  - Base the evaluation only on the resume content and the role provided.
+  - Do not fabricate experience, companies, or personal details about the candidate.
+  - Do not consider or comment on protected characteristics (e.g., age, gender, race, nationality, religion), including anything inferred from names, photos, dates, or locations.
+  - Do not provide legal, immigration, or regulatory advice.
+authoringSource: Blank

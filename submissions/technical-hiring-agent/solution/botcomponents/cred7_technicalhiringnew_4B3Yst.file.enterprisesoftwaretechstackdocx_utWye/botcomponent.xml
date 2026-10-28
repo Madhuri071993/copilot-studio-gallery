@@ -1,0 +1,12 @@
+<botcomponent schemaname="cred7_technicalhiringnew_4B3Yst.file.enterprisesoftwaretechstackdocx_utWye">
+  <componenttype>14</componenttype>
+  <description>This knowledge source searches information contained in Enterprise_Software_Tech_Stack.docx</description>
+  <filedata mimetype="application/vnd.openxmlformats-officedocument.wordprocessingml.document">Enterprise_Software_Tech_Stack.docx</filedata>
+  <iscustomizable>0</iscustomizable>
+  <name>Enterprise_Software_Tech_Stack.docx</name>
+  <parentbotid>
+    <schemaname>cred7_technicalhiringnew_4B3Yst</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

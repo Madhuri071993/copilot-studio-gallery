@@ -1,0 +1,11 @@
+<botcomponent schemaname="cred7_technicalhiringnew_4B3Yst.skill.candidate-resume-evaluation_sil">
+  <componenttype>9</componenttype>
+  <description>Evaluates a candidate's resume against a technical role or job description. Use when the user uploads or pastes a resume or CV, or asks to evaluate, screen, assess, or compare a candidate</description>
+  <iscustomizable>0</iscustomizable>
+  <name>candidate-resume-evaluation</name>
+  <parentbotid>
+    <schemaname>cred7_technicalhiringnew_4B3Yst</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
