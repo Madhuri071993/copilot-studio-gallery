@@ -11,7 +11,7 @@
   "category": "IT & security",
   "createdAt": "2026-10-01",
   "updatedAt": "2026-10-01",
-  "featured": false,
+  "featured": true,
   "author": "Sushank Kumar",
   "authors": [
     {
@@ -24,6 +24,7 @@
   "bundle": "bundles/kusto-analytics-agent.zip",
   "agentCount": 1,
   "workflowCount": 0,
+  "hookCount": 0,
   "componentCount": 12,
   "agents": [
     {

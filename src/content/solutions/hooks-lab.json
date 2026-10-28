@@ -1,5 +1,5 @@
 {
-  "name": "Hooks Lab",
+  "name": "All You Can Hook",
   "description": "A hands-on Copilot Studio sample teaching six hook events with real weather tools, targeted prompt redaction, blocked calls, changed results and failure context.",
   "tags": [
     "hooks",
@@ -27,6 +27,7 @@
   "bundle": "bundles/hooks-lab.zip",
   "agentCount": 1,
   "workflowCount": 6,
+  "hookCount": 6,
   "componentCount": 6,
   "agents": [
     {
