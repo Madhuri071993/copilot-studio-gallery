@@ -1,5 +1,7 @@
 # Clinical Support Agent
 
+[!IMPORTANT] This agent is intended for ideation, demonstration, and experimentation. It has not been clinically validated or assessed for healthcare compliance. It is not intended for patient care, clinical decision-making, emergencies, or processing patient-identifiable information. Any healthcare use requires appropriate clinical, privacy, security, and regulatory review.
+
 Retrieve general clinical guidelines, internal protocols, structured medical reference information, and public medical literature from approved Dataverse sources.
 
 The agent provides general, role-appropriate clinical information for nurses, clinicians, and administrative staff. It does not handle PHI or provide patient-specific recommendations.
